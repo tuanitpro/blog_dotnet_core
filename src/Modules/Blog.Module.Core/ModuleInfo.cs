@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace Blog.Module.Core
 {
@@ -9,5 +10,7 @@ namespace Blog.Module.Core
         public string Name { get; set; }
 
         public Version Version { get; set; }
+
+        public Assembly Assembly { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Blog.Module.Categories.Domain;
+using Blog.Module.Posts.Domain;
 
 namespace Blog.Module.Posts.Services
 {

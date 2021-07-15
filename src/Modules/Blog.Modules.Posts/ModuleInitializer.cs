@@ -1,5 +1,5 @@
 ﻿using System;
-using Blog.Module.Categories.Repository;
+using Blog.Module.Posts.Repository;
 using Blog.Module.Posts.Services;
 using Blog.Module.Core;
 using Microsoft.AspNetCore.Builder;

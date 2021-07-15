@@ -1,21 +1,21 @@
 ﻿using System.Threading.Tasks;
-using Blog.Module.Categories.Domain;
-using Blog.Module.Categories.Services;
+using Blog.Module.Posts.Domain;
+using Blog.Module.Posts.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Blog.Module.Categories.Controllers
+namespace Blog.Module.Posts.Controllers
 {
     [Route("api/[Controller]")]
     [ApiExplorerSettings(GroupName = "v1")]
-    public class CategoryController : ControllerBase
+    public class PostController : ControllerBase
     {
-        private readonly IBlogQueryService blogQueryService;
-        private readonly IBlogCommandService blogCommandService;
+        private readonly IPostQueryService postQueryService;
+        private readonly IPostCommandService postCommandService;
 
-        public CategoryController(IBlogQueryService blogQueryService, IBlogCommandService blogCommandService)
+        public PostController(IPostQueryService postQueryService, IPostCommandService postCommandService)
         {
-            this.blogQueryService = blogQueryService;
-            this.blogCommandService = blogCommandService;
+            this.postQueryService = postQueryService;
+            this.postCommandService = postCommandService;
         }
 
         [HttpGet]
@@ -32,14 +32,14 @@ namespace Blog.Module.Categories.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CategoryModel model)
+        public async Task<IActionResult> Post([FromBody] PostModel model)
         {
             return Ok();
         }
 
         [HttpPut]
         [Route("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] CategoryModel model)
+        public async Task<IActionResult> Put(int id, [FromBody] PostModel model)
         {
             return Ok();
         }

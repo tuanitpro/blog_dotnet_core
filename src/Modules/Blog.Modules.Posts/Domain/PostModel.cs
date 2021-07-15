@@ -1,4 +1,4 @@
-﻿namespace Blog.Module.Categories.Domain
+﻿namespace Blog.Module.Posts.Domain
 {
     public class PostModel
     {
